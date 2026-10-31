@@ -339,18 +339,28 @@ async function syncFromGoogleSheets(){
   const zoneRows=Array.isArray(payload.desempeno)?payload.desempeno:[];
   const zoneMap=new Map();
   zoneRows.forEach(r=>{
-   const z=String(r.Zona??'').trim(), val=parseSheetNumber(r.Valor);
-   if(!z||val===null)return;
+   const z=String(r.Zona??'').trim();
+   if(!z)return;
    const indicator=String(r.Indicador??'').trim().toLowerCase();
-   if(!zoneMap.has(z))zoneMap.set(z,{zona:z,region:'',ytd:null,casos:null,jul:null,ago:null,sep:null,meta:null,var:null});
-   const d=zoneMap.get(z);
-   if(indicator==='nps ytd'||indicator==='nps')d.ytd=val;
-   else if(indicator==='casos ytd'||indicator==='casos')d.casos=val;
-   else if(indicator==='nps julio'||indicator==='julio')d.jul=val;
-   else if(indicator==='nps agosto'||indicator==='agosto')d.ago=val;
-   else if(indicator==='nps septiembre'||indicator==='septiembre')d.sep=val;
-   else if(indicator==='meta e119'||indicator==='meta')d.meta=val;
-   else if(indicator==='variación ytd vs. meta'||indicator==='variacion ytd vs meta'||indicator==='variación'||indicator==='variacion')d.var=val;
+   if(!zoneMap.has(z))zoneMap.set(z,{zona:z,region:String(r.Region??''),ytd:null,casos:null,jul:null,ago:null,sep:null,meta:null,var:null});
+   const d=zoneMap.get(z); if(!d.region)d.region=String(r.Region??'');
+   // El backend devuelve una fila consolidada por zona; también admite el esquema anterior por indicador.
+   if(r.Valor!==undefined && (indicator==='nps ytd'||indicator==='nps'))d.ytd=parseSheetNumber(r.Valor);
+   if(r.Casos!==undefined)d.casos=parseSheetNumber(r.Casos);
+   if(r.Julio!==undefined)d.jul=parseSheetNumber(r.Julio);
+   if(r.Agosto!==undefined)d.ago=parseSheetNumber(r.Agosto);
+   if(r.Septiembre!==undefined)d.sep=parseSheetNumber(r.Septiembre);
+   if(r.Meta!==undefined)d.meta=parseSheetNumber(r.Meta);
+   if(r.Variacion!==undefined)d.var=parseSheetNumber(r.Variacion);
+   const val=parseSheetNumber(r.Valor);
+   if(r.Casos===undefined && val!==null){
+    if(indicator==='casos ytd'||indicator==='casos')d.casos=val;
+    else if(indicator==='nps julio'||indicator==='julio')d.jul=val;
+    else if(indicator==='nps agosto'||indicator==='agosto')d.ago=val;
+    else if(indicator==='nps septiembre'||indicator==='septiembre')d.sep=val;
+    else if(indicator==='meta e119'||indicator==='meta')d.meta=val;
+    else if(indicator.includes('variación')||indicator.includes('variacion'))d.var=val;
+   }
   });
   const sharedZones=[...zoneMap.values()].filter(d=>d.ytd!==null&&d.casos!==null&&d.var!==null);
   if(sharedZones.length){
