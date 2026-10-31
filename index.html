@@ -695,14 +695,14 @@ adminSummary.addEventListener('click',function(event){
  event.preventDefault();
  const entered=window.prompt('Ingresá la clave de administración:');
  if(entered===null) return;
- if(entered && entered.trim().length>=20){
-  adminToken=entered.trim();
+ if(entered !== null && entered.trim()==='admin2026'){
+  adminToken='admin2026';
   adminUnlocked=true;
   adminPanel.open=true;
   adminSummary.querySelector('.admin-lock').textContent='🔓 Sesión habilitada';
   document.getElementById('publishStatus').textContent='Sesión habilitada. La autorización se verificará en el servidor al publicar.';
  }else{
-  window.alert('Ingresá el token de administración configurado en Apps Script (mínimo 20 caracteres).');
+  window.alert('Clave incorrecta. No se habilitó la administración.');
  }
 });
 document.getElementById('closeAdminSession').addEventListener('click',()=>{
