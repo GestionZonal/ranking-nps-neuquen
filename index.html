@@ -252,14 +252,7 @@ tbody td{color:#e0eff7!important;border-bottom-color:#17445b!important}tbody tr:
 @media(max-width:700px){.zone-bar-row{grid-template-columns:minmax(90px,112px) minmax(60px,1fr) 48px;gap:6px}.zone-chart-card{padding:12px}.zone-bar-label{font-size:10px}}
 
 .admin-config{padding:16px;border-top:1px solid #1b526b;background:#041827;color:#e6f3fb}.admin-config h3{margin:0 0 5px;font-size:15px}.admin-help{margin:0 0 14px;color:#9ab9ca;font-size:12px}.admin-form{display:flex;align-items:end;gap:10px;flex-wrap:wrap;margin:12px 0}.admin-form .field{min-width:150px}.admin-form .field label{color:#b6d5e0}.admin-form .field input,.admin-form .field select{background:#062338;color:#e8f7fc;border-color:#17637a;min-width:150px}.admin-table-wrap{max-height:300px;overflow:auto;border:1px solid #17637a;border-radius:8px}.admin-table{width:100%;min-width:600px;border-collapse:collapse}.admin-table th,.admin-table td{padding:8px;text-align:left;border-bottom:1px solid #17485c;font-size:12px}.admin-table th{position:sticky;top:0;background:#12445d;color:#e8fbff}.admin-table select{background:#062338;color:#e8f7fc;border:1px solid #17637a;border-radius:6px;padding:6px}.admin-table .btn{height:30px;padding:0 9px;font-size:11px}.admin-config .small{display:block;margin-top:10px;color:#9ab9ca}#zoneUploadStatus{display:block;margin-top:8px;color:#9ab9ca;font-size:11px}#closeAdminSession{border-color:#a84b58;background:#512533;color:#ffe8ec}
-</style></head><body><header class="header"><div class="headrow"><div><div class="eyebrow">Experiencia del cliente · Informe ejecutivo</div><h1>Ranking de sucursales por NPS</h1><p>Ranking trimestral · Sucursales seleccionadas de Neuquén</p></div><div><div class="period">3Q 2026 · JUL — SEP</div><div id="sharedDataStatus" style="font-size:11px;color:#a6f2f1;margin-top:7px;text-align:center">Conectando con la fuente compartida…</div></div></div></header><main class="wrap"><details class="admin-tools"><summary>Administración · Actualizar archivos fuente</summary><div class="uploadbox"><div><strong>Actualizar informes PDF</strong><p>Uso administrativo. Cargá el PDF completo correspondiente para actualizar los datos y las posiciones globales.</p></div><div class="uploadactions"><label class="btn uploadbtn" for="pdfRanking">Cargar PDF de Ranking NPS</label><input id="pdfRanking" type="file" accept="application/pdf" hidden><label class="btn alt uploadbtn" for="pdfVariacion">Cargar PDF de Variación</label><input id="pdfVariacion" type="file" accept="application/pdf" hidden><label class="btn alt uploadbtn" for="pdfDesempenoZonas">Cargar Desempeño por Zona</label><input id="pdfDesempenoZonas" type="file" accept="application/pdf" hidden></div><span id="uploadStatus" role="status">Datos de ejemplo: 3Q 2026</span><span id="zoneUploadStatus" role="status" class="small"></span>
-<div id="publishBox" style="margin:14px 0 0;padding:14px;border:1px solid #1c6b7d;border-radius:9px;background:#082b40">
-<strong style="color:#7fe9e6">Publicación compartida</strong>
-<p style="font-size:12px;color:#b9d9e5;margin:5px 0 10px">Los PDF se procesan primero en esta sesión. Revisá el dashboard y confirmá la publicación para actualizar la planilla compartida.</p>
-<div id="publishPreview" role="status" style="font-size:12px;color:#d9f5fb;margin-bottom:10px">Todavía no hay cambios pendientes de publicación.</div>
-<button class="btn" id="publishShared" type="button" disabled>Confirmar y publicar en Google Sheets</button>
-<span id="publishStatus" role="status" style="display:block;margin-top:8px;font-size:11px;color:#a9d5e2"></span>
-</div></div><div class="admin-config" id="adminConfig"><h3>Configuración de zonas y sucursales</h3><p class="admin-help">Las sucursales nuevas detectadas en los PDF se incorporan automáticamente cuando la zona es identificable. También podés administrarlas manualmente.</p><div class="admin-form"><div class="field"><label for="newBranchCode">Código de sucursal</label><input id="newBranchCode" inputmode="numeric" maxlength="3" placeholder="Ej. 356"></div><div class="field"><label for="newBranchZone">Zona de la sucursal</label><select id="newBranchZone"></select></div><button class="btn" id="addBranch">Agregar sucursal</button></div><div class="admin-form zone-form"><div class="field"><label for="newZoneName">Nueva zona</label><input id="newZoneName" placeholder="Nombre de la zona"></div><button class="btn alt" id="addZone">Agregar zona</button><div class="field"><label for="removeZoneSelect">Quitar zona (sin sucursales activas)</label><select id="removeZoneSelect"></select></div><button class="btn alt" id="removeZone">Quitar zona</button></div><div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Sucursal</th><th>Zona</th><th>Estado</th><th>Acción</th></tr></thead><tbody id="adminBranches"></tbody></table></div><div class="admin-form"><button class="btn alt" id="exportConfig">Descargar configuración</button><label class="btn alt uploadbtn" for="importConfig">Importar configuración</label><input id="importConfig" type="file" accept="application/json,.json" hidden><button class="btn alt" id="resetConfig">Restaurar configuración original</button><button class="btn" id="closeAdminSession" type="button">Cerrar sesión de administración</button></div><span id="configStatus" role="status" class="small"></span></div></details>
+ .tablewrap{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch} .tablewrap table{min-width:1120px;width:100%;table-layout:auto} .tablewrap th{white-space:normal;line-height:1.25;vertical-align:middle} .tablewrap td{white-space:nowrap} @media(max-width:900px){.tablewrap table{min-width:1080px}.tablewrap th,.tablewrap td{padding:7px 9px;font-size:11px}} </style></head><body><header class="header"><div class="headrow"><div><div class="eyebrow">Experiencia del cliente · Informe ejecutivo</div><h1>Ranking de sucursales por NPS</h1><p>Ranking trimestral · Sucursales seleccionadas de Neuquén</p></div><div class="period">3Q 2026 · JUL — SEP</div></div></header><main class="wrap"><details class="admin-tools"><summary>Administración · Actualizar archivos fuente</summary><div class="uploadbox"><div><strong>Actualizar informes PDF</strong><p>Uso administrativo. Cargá el PDF completo correspondiente para actualizar los datos y las posiciones globales.</p></div><div class="uploadactions"><label class="btn uploadbtn" for="pdfRanking">Cargar PDF de Ranking NPS</label><input id="pdfRanking" type="file" accept="application/pdf" hidden><label class="btn alt uploadbtn" for="pdfVariacion">Cargar PDF de Variación</label><input id="pdfVariacion" type="file" accept="application/pdf" hidden><label class="btn alt uploadbtn" for="pdfDesempenoZonas">Cargar Desempeño por Zona</label><input id="pdfDesempenoZonas" type="file" accept="application/pdf" hidden></div><span id="uploadStatus" role="status">Datos de ejemplo: 3Q 2026</span><span id="zoneUploadStatus" role="status" class="small"></span></div><div class="admin-config" id="adminConfig"><h3>Configuración de zonas y sucursales</h3><p class="admin-help">Las sucursales nuevas detectadas en los PDF se incorporan automáticamente cuando la zona es identificable. También podés administrarlas manualmente.</p><div class="admin-form"><div class="field"><label for="newBranchCode">Código de sucursal</label><input id="newBranchCode" inputmode="numeric" maxlength="3" placeholder="Ej. 356"></div><div class="field"><label for="newBranchZone">Zona de la sucursal</label><select id="newBranchZone"></select></div><button class="btn" id="addBranch">Agregar sucursal</button></div><div class="admin-form zone-form"><div class="field"><label for="newZoneName">Nueva zona</label><input id="newZoneName" placeholder="Nombre de la zona"></div><button class="btn alt" id="addZone">Agregar zona</button><div class="field"><label for="removeZoneSelect">Quitar zona (sin sucursales activas)</label><select id="removeZoneSelect"></select></div><button class="btn alt" id="removeZone">Quitar zona</button></div><div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Sucursal</th><th>Zona</th><th>Estado</th><th>Acción</th></tr></thead><tbody id="adminBranches"></tbody></table></div><div class="admin-form"><button class="btn alt" id="exportConfig">Descargar configuración</button><label class="btn alt uploadbtn" for="importConfig">Importar configuración</label><input id="importConfig" type="file" accept="application/json,.json" hidden><button class="btn alt" id="resetConfig">Restaurar configuración original</button><button class="btn" id="closeAdminSession" type="button">Cerrar sesión de administración</button></div><span id="configStatus" role="status" class="small"></span></div></details>
 <div class="regiontops regiontops-ranking" id="regionRanking" aria-label="Mejores y peores sucursales por NPS"><div class="regiontop"><b>REGIÓN CENTRO</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>11</strong><em>266</em></section><section><strong>216</strong><em>45</em></section><section><strong>163</strong><em>12</em></section></div><div class="regiontop"><b>REGIÓN NORTE</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>96</strong><em>151</em></section><section><strong>206</strong><em>261</em></section><section><strong>264</strong><em>55</em></section></div><div class="regiontop"><b>REGIÓN PAMPA ANDINA</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>148</strong><em>9</em></section><section><strong>122</strong><em>212</em></section><section><strong>202</strong><em>15</em></section></div><div class="regiontop"><b>REGIÓN SUR</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>211</strong><em>200</em></section><section><strong>75</strong><em>179</em></section><section><strong>104</strong><em>160</em></section></div><div class="regiontop"><b>REGIÓN LIBERTAD</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>385</strong><em>379</em></section><section><strong>386</strong><em>378</em></section><section><strong>382</strong><em>377</em></section></div></div><div class="regiontops regiontops-variacion" id="regionVariacion" aria-label="Mejores y peores sucursales por variación" hidden><div class="regiontop"><b>REGIÓN CENTRO</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>163</strong><em>45</em></section><section><strong>46</strong><em>265</em></section><section><strong>356</strong><em>12</em></section></div><div class="regiontop"><b>REGIÓN NORTE</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>152</strong><em>89</em></section><section><strong>185</strong><em>221</em></section><section><strong>85</strong><em>361</em></section></div><div class="regiontop"><b>REGIÓN PAMPA ANDINA</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>18</strong><em>196</em></section><section><strong>257</strong><em>177</em></section><section><strong>202</strong><em>8</em></section></div><div class="regiontop"><b>REGIÓN SUR</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>179</strong><em>183</em></section><section><strong>131</strong><em>31</em></section><section><strong>23</strong><em>220</em></section></div><div class="regiontop"><b>REGIÓN LIBERTAD</b><div><span>TOP</span><span>BOTTOM</span></div><section><strong>378</strong><em>383</em></section><section><strong>380</strong><em>381</em></section><section><strong>377</strong><em>385</em></section></div></div><section class="topcards"><div class="card"><div class="klabel" id="klabel1">NPS promedio de sucursales</div><div class="kvalue" id="avg">—</div><div class="kfoot" id="kfoot1">Promedio simple de las seleccionadas</div></div><div class="card"><div class="klabel" id="klabel2">Casos del trimestre</div><div class="kvalue" id="cases">—</div><div class="kfoot" id="kfoot2">Total de respuestas registradas</div></div><div class="card"><div class="klabel" id="klabel3">Sucursales en ranking</div><div class="kvalue" id="qualified">—</div><div class="kfoot" id="kfoot3">Mínimo de 60 casos en el trimestre</div></div><div class="card"><div class="klabel" id="klabel4">Variación vs. 2Q 2026</div><div class="kvalue" id="variation">—</div><div class="kfoot" id="kfoot4">Promedio simple de la variación</div></div></section>
 <div class="filters"><div class="field"><label for="zone">Zona</label><select id="zone"><option value="all">Todas las zonas</option><option>Neuquén Ciudad</option><option>Neuquén Interior</option></select></div><div class="field"><label for="statusFilter">Participación</label><select id="statusFilter"><option value="all">Todas</option><option value="rank">En ranking (≥ 60 casos)</option><option value="out">Fuera del ranking (&lt; 60 casos)</option></select></div><div class="field"><label for="search">Buscar sucursal</label><input id="search" placeholder="Código, ej. 356"></div><button class="btn" id="reset">Restablecer</button><button class="btn alt" id="csv">Exportar a Excel (.xlsx)</button></div>
 <div class="tabbar" role="tablist" aria-label="Vistas del informe"><button class="tab active" data-tab="ranking" role="tab" aria-selected="true">Ranking Sucursales x NPS</button><button class="tab" data-tab="variacion" role="tab" aria-selected="false">Ranking Sucursales x VARIACIÓN</button><button class="tab" data-tab="zonas" role="tab" aria-selected="false">Desempeño por zonas (trimestral)</button></div>
@@ -277,108 +270,32 @@ tbody td{color:#e0eff7!important;border-bottom-color:#17445b!important}tbody tr:
 <div class="bottom" id="insights"><section class="insight"><h3 id="bestTitle">Mayor NPS entre las sucursales visibles</h3><div id="best"></div></section><section class="insight"><h3 id="worstTitle">Menor NPS entre las sucursales visibles</h3><div id="worst"></div></section></div><section class="chart-card" aria-live="polite"><div class="chart-head"><div><h3 id="chartTitle">NPS por sucursal</h3><p id="chartSubtitle">Comparación visual de las sucursales filtradas</p></div><span class="small chart-units-empty" id="chartUnits" aria-hidden="true"></span></div><div id="chartList" class="chart-list"></div><div class="chart-legend" id="chartLegend"><span><i class="dot" style="background:#31d8bd"></i>Participa del ranking oficial</span><span><i class="dot" style="background:#ffd166"></i>Menos de 60 casos: fuera del ranking oficial</span></div></section><footer>Vista web de trabajo · Fuentes: Ranking por NPS y Ranking por variación 3Q 2026 · Posición global en cada solapa tomada del PDF completo correspondiente; en Variación se exige un mínimo de 60 casos tanto en 3Q26 como en 2Q26.</footer></main><script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
 <script>
 const DATA=[{"sucursal": "050", "zona": "Neuquén Interior", "nps": "64,65", "casos": 198, "nps2q": "55,47", "casos2q": 128, "varq": "9,2", "varmeta": "-1,4", "nps25": "65,29", "casos25": 12100, "varmpaa": "-0,6", "ranking": true}, {"sucursal": "076", "zona": "Neuquén Interior", "nps": "59,49", "casos": 158, "nps2q": "66,18", "casos2q": 136, "varq": "-6,7", "varmeta": "-6,5", "nps25": "72,26", "casos25": 13700, "varmpaa": "-12,8", "ranking": true}, {"sucursal": "172", "zona": "Neuquén Interior", "nps": "68,75", "casos": 128, "nps2q": "64,96", "casos2q": 117, "varq": "3,8", "varmeta": "1,8", "nps25": "72,00", "casos25": 7500, "varmpaa": "-3,3", "ranking": true}, {"sucursal": "182", "zona": "Neuquén Interior", "nps": "71,05", "casos": 228, "nps2q": "66,84", "casos2q": 190, "varq": "4,2", "varmeta": "2,3", "nps25": "73,96", "casos25": 16900, "varmpaa": "-2,9", "ranking": true}, {"sucursal": "188", "zona": "Neuquén Interior", "nps": "67,88", "casos": 137, "nps2q": "67,02", "casos2q": 94, "varq": "0,9", "varmeta": "16,2", "nps25": "74,51", "casos25": 10200, "varmpaa": "-6,6", "ranking": true}, {"sucursal": "213", "zona": "Neuquén Interior", "nps": "69,01", "casos": 171, "nps2q": "72,88", "casos2q": 118, "varq": "-3,9", "varmeta": "3,8", "nps25": "73,23", "casos25": 12700, "varmpaa": "-4,2", "ranking": true}, {"sucursal": "228", "zona": "Neuquén Interior", "nps": "54,41", "casos": 68, "nps2q": "64,44", "casos2q": 45, "varq": "-10,0", "varmeta": "-21,6", "nps25": "55,00", "casos25": 4000, "varmpaa": "-0,6", "ranking": true}, {"sucursal": "230", "zona": "Neuquén Interior", "nps": "75,00", "casos": 32, "nps2q": "75,00", "casos2q": 28, "varq": "0,0", "varmeta": "4,0", "nps25": "79,31", "casos25": 2900, "varmpaa": "-4,3", "ranking": false}, {"sucursal": "234", "zona": "Neuquén Interior", "nps": "71,25", "casos": 80, "nps2q": "83,33", "casos2q": 66, "varq": "-12,1", "varmeta": "-0,3", "nps25": "75,38", "casos25": 6500, "varmpaa": "-4,1", "ranking": true}, {"sucursal": "247", "zona": "Neuquén Interior", "nps": "56,67", "casos": 30, "nps2q": "61,90", "casos2q": 21, "varq": "-5,2", "varmeta": "2,1", "nps25": "50,00", "casos25": 2800, "varmpaa": "6,7", "ranking": false}, {"sucursal": "259", "zona": "Neuquén Interior", "nps": "69,23", "casos": 39, "nps2q": "78,00", "casos2q": 50, "varq": "-8,8", "varmeta": "7,5", "nps25": "72,55", "casos25": 5100, "varmpaa": "-3,3", "ranking": false}, {"sucursal": "266", "zona": "Neuquén Interior", "nps": "48,24", "casos": 85, "nps2q": "51,47", "casos2q": 68, "varq": "-3,2", "varmeta": "-24,8", "nps25": "74,14", "casos25": 5800, "varmpaa": "-25,9", "ranking": true}, {"sucursal": "356", "zona": "Neuquén Interior", "nps": "72,04", "casos": 93, "nps2q": "59,21", "casos2q": 76, "varq": "12,8", "varmeta": "6,0", "nps25": "51,72", "casos25": 8700, "varmpaa": "20,3", "ranking": true}, {"sucursal": "357", "zona": "Neuquén Interior", "nps": "70,00", "casos": 70, "nps2q": "73,97", "casos2q": 73, "varq": "-4,0", "varmeta": "0,3", "nps25": "61,02", "casos25": 5900, "varmpaa": "9,0", "ranking": true}];
-
-const GOOGLE_SHEETS_API = "https://script.google.com/macros/s/AKfycbyJ3SbN1HbH_Ch5tzl6Z1_jHgzO3fWbsyPXbHCHy4TZM8vCMu4k3oDUaOnQYyDfBX0b/exec";
-const SHARED_SYNC_ENABLED = true;
-function setSharedStatus(message, good=false){
- const el=document.getElementById('sharedDataStatus');
- if(el){el.textContent=message;el.style.color=good?'#5ce0b8':'#ffd166';}
-}
-function fetchSharedSheetData(){
- return new Promise((resolve,reject)=>{
-  const cb='rankingNpsCallback_'+Date.now()+'_'+Math.floor(Math.random()*100000);
-  const script=document.createElement('script');
-  const timer=setTimeout(()=>{cleanup();reject(new Error('Tiempo de espera agotado'));},12000);
-  function cleanup(){clearTimeout(timer);try{delete window[cb]}catch(e){window[cb]=undefined}script.remove();}
-  window[cb]=(payload)=>{cleanup();payload&&payload.ok?resolve(payload):reject(new Error(payload?.error||'Respuesta inválida de Google Sheets'));};
-  script.onerror=()=>{cleanup();reject(new Error('No se pudo conectar con Google Sheets'));};
-  script.src=GOOGLE_SHEETS_API+'?callback='+encodeURIComponent(cb)+'&t='+Date.now();
-  document.head.appendChild(script);
- });
-}
-function parseSheetNumber(v){
- if(v===null||v===undefined||String(v).trim()==='')return null;
- if(typeof v==='number')return v;
- const s=String(v).trim().replace(/\s/g,'').replace(/\.(?=\d{3}(?:\D|$))/g,'').replace(',','.');
- const n=Number(s);return Number.isFinite(n)?n:null;
-}
-function normalizeSheetBranch(row){
- const code=String(row.Sucursal??row.Codigo??'').trim().padStart(3,'0');
- const zone=String(row.Zona??'').trim();
- const nps=parseSheetNumber(row.NPS);
- const cases=parseSheetNumber(row.Casos_Totales??row.Casos);
- // The Google Sheet must contain the full ranking fields before it can safely replace the current data.
- const hasFullSchema=['NPS_Anterior','Casos_Anterior','Variacion_Trimestre','Variacion_Meta','NPS_Anual_Anterior','Casos_Anual_Anterior','Variacion_Anual'].every(k=>Object.prototype.hasOwnProperty.call(row,k));
- if(!/^\d{3}$/.test(code)||!zone||nps===null||cases===null||!hasFullSchema)return null;
- return {
-  sucursal:code,zona:zone,nps:String(row.NPS).replace('.',','),casos,
-  nps2q:String(row.NPS_Anterior??'—').replace('.',','),casos2q:parseSheetNumber(row.Casos_Anterior)||0,
-  varq:String(row.Variacion_Trimestre??'—').replace('.',','),varmeta:String(row.Variacion_Meta??'—').replace('.',','),
-  nps25:String(row.NPS_Anual_Anterior??'—').replace('.',','),casos25:parseSheetNumber(row.Casos_Anual_Anterior),
-  varmpaa:String(row.Variacion_Anual??'—').replace('.',','),ranking:cases>=60,activa:String(row.Activa??'SI').toUpperCase()!=='NO'
- };
-}
-async function syncFromGoogleSheets(){
- if(!SHARED_SYNC_ENABLED||pendingSharedPublication)return;
- setSharedStatus('Consultando Google Sheets…');
- try{
-  const payload=await fetchSharedSheetData();
-  const rows=Array.isArray(payload.nps)?payload.nps:[];
-  const complete=rows.map(normalizeSheetBranch).filter(Boolean);
-  if(complete.length){
-   DATA.splice(0,DATA.length,...complete);
-   const zones=[...new Set(complete.map(x=>x.zona).filter(Boolean))];
-   if(zones.length)MANAGED_ZONES=[...new Set([...MANAGED_ZONES,...zones])];
-   // A published shared source takes precedence over per-browser saved values.
-   try{localStorage.removeItem(CONFIG_KEY)}catch(e){}
-   syncZoneOptions();renderAdminBranches();render();
-   setSharedStatus(`Datos compartidos sincronizados · ${complete.length} sucursales`,true);
-  }else{
-   setSharedStatus('API conectada; faltan columnas completas en Datos_NPS. Se conservan los datos de referencia.');
-  }
-  const zoneRows=Array.isArray(payload.desempeno)?payload.desempeno:[];
-  const zoneMap=new Map();
-  zoneRows.forEach(r=>{
-   const z=String(r.Zona??'').trim();
-   if(!z)return;
-   const indicator=String(r.Indicador??'').trim().toLowerCase();
-   if(!zoneMap.has(z))zoneMap.set(z,{zona:z,region:String(r.Region??''),ytd:null,casos:null,jul:null,ago:null,sep:null,meta:null,var:null});
-   const d=zoneMap.get(z); if(!d.region)d.region=String(r.Region??'');
-   // El backend devuelve una fila consolidada por zona; también admite el esquema anterior por indicador.
-   if(r.Valor!==undefined && (indicator==='nps ytd'||indicator==='nps'))d.ytd=parseSheetNumber(r.Valor);
-   if(r.Casos!==undefined)d.casos=parseSheetNumber(r.Casos);
-   if(r.Julio!==undefined)d.jul=parseSheetNumber(r.Julio);
-   if(r.Agosto!==undefined)d.ago=parseSheetNumber(r.Agosto);
-   if(r.Septiembre!==undefined)d.sep=parseSheetNumber(r.Septiembre);
-   if(r.Meta!==undefined)d.meta=parseSheetNumber(r.Meta);
-   if(r.Variacion!==undefined)d.var=parseSheetNumber(r.Variacion);
-   const val=parseSheetNumber(r.Valor);
-   if(r.Casos===undefined && val!==null){
-    if(indicator==='casos ytd'||indicator==='casos')d.casos=val;
-    else if(indicator==='nps julio'||indicator==='julio')d.jul=val;
-    else if(indicator==='nps agosto'||indicator==='agosto')d.ago=val;
-    else if(indicator==='nps septiembre'||indicator==='septiembre')d.sep=val;
-    else if(indicator==='meta e119'||indicator==='meta')d.meta=val;
-    else if(indicator.includes('variación')||indicator.includes('variacion'))d.var=val;
-   }
-  });
-  const sharedZones=[...zoneMap.values()].filter(d=>d.ytd!==null&&d.casos!==null&&d.var!==null);
-  if(sharedZones.length){
-   ZONE_PERFORMANCE.splice(0,ZONE_PERFORMANCE.length,...sharedZones.sort((a,b)=>b.var-a.var));
-   renderZonePerformance();renderZoneBars();
-  }
- }catch(err){
-  setSharedStatus('No se pudo sincronizar; se muestran los datos guardados en el archivo.');
-  console.warn('Sincronización Google Sheets:',err);
- }
-}
-
 const CONFIG_KEY='rankingNpsNeuquenConfigV1';
+const GOOGLE_SHEETS_API='https://script.google.com/macros/s/AKfycbyJ3SbN1HbH_Ch5tzl6Z1_jHgzO3fWbsyPXbHCHy4TZM8vCMu4k3oDUaOnQYyDfBX0b/exec';
+const ADMIN_TOKEN='admin2026';
 const ORIGINAL_DATA=JSON.parse(JSON.stringify(DATA));
 let MANAGED_ZONES=['Neuquén Ciudad','Neuquén Interior'];
 function setConfigStatus(message){const el=document.getElementById('configStatus');if(el)el.textContent=message;}
-function saveConfig(){try{localStorage.setItem(CONFIG_KEY,JSON.stringify({data:DATA,zones:MANAGED_ZONES}));setConfigStatus('Configuración guardada en este navegador.');}catch(e){setConfigStatus('No se pudo guardar la configuración en este navegador.');}}
-function loadConfig(){try{const saved=JSON.parse(localStorage.getItem(CONFIG_KEY)||'null');if(saved&&Array.isArray(saved.data)){DATA.splice(0,DATA.length,...saved.data);if(Array.isArray(saved.zones))MANAGED_ZONES=[...new Set(saved.zones.filter(Boolean))];}}catch(e){console.warn('No se pudo cargar la configuración guardada',e);}DATA.forEach(d=>{d.sucursal=String(d.sucursal).padStart(3,'0');if(d.activa===undefined)d.activa=true;if(d.zona&&!MANAGED_ZONES.includes(d.zona))MANAGED_ZONES.push(d.zona);});}
+function localSaveConfig(){try{localStorage.setItem(CONFIG_KEY,JSON.stringify({data:DATA,zones:MANAGED_ZONES}));}catch(e){console.warn('No se pudo guardar copia local',e);}}
+async function saveConfig(){
+ localSaveConfig();
+ try {
+  const body={action:'save_config',token:ADMIN_TOKEN,zones:MANAGED_ZONES,data:DATA};
+  await fetch(GOOGLE_SHEETS_API,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(body)});
+  setConfigStatus('Configuración enviada a Google Sheets. Verificando sincronización…');
+  setTimeout(()=>loadSharedConfig(true),1200);
+ } catch(e) {setConfigStatus('No se pudo enviar a Google Sheets: '+e.message);}
+}
+function loadConfig(){try{const saved=JSON.parse(localStorage.getItem(CONFIG_KEY)||'null');if(saved&&Array.isArray(saved.data)){DATA.splice(0,DATA.length,...saved.data);if(Array.isArray(saved.zones))MANAGED_ZONES=[...new Set(saved.zones.filter(Boolean))];}}catch(e){console.warn('No se pudo cargar la configuración guardada',e);}normalizeLocalConfig_();}
+function normalizeLocalConfig_(){DATA.forEach(d=>{d.sucursal=String(d.sucursal).padStart(3,'0');if(d.activa===undefined)d.activa=true;if(d.zona&&!MANAGED_ZONES.includes(d.zona))MANAGED_ZONES.push(d.zona);});}
+function loadSharedConfig(silent=false){
+ return new Promise(resolve=>{
+  const cb='npsConfigCb_'+Date.now(); const timer=setTimeout(()=>{cleanup();if(!silent)setConfigStatus('No se pudo verificar Google Sheets; se mantiene la copia local.');resolve(false);},8000);
+  function cleanup(){clearTimeout(timer);try{delete window[cb];}catch(e){window[cb]=undefined;}const s=document.getElementById(cb);if(s)s.remove();}
+  window[cb]=payload=>{cleanup();if(payload&&payload.ok&&payload.configuracionCompartida){const shared=payload.configuracionCompartida;if(Array.isArray(shared.data)&&shared.data.length){DATA.splice(0,DATA.length,...shared.data.map(d=>({...d,sucursal:String(d.sucursal||'').padStart(3,'0')})));}if(Array.isArray(shared.zonas)&&shared.zonas.length)MANAGED_ZONES=[...new Set(shared.zonas)];normalizeLocalConfig_();localSaveConfig();syncZoneOptions();renderAdminBranches();render();if(!silent)setConfigStatus('Configuración sincronizada desde Google Sheets.');resolve(true);}else{if(!silent)setConfigStatus('Google Sheets respondió, pero no devolvió la configuración compartida.');resolve(false);}};
+  const s=document.createElement('script');s.id=cb;s.src=GOOGLE_SHEETS_API+'?callback='+cb+'&_='+Date.now();s.onerror=()=>{cleanup();if(!silent)setConfigStatus('No se pudo conectar con Google Sheets.');resolve(false);};document.head.appendChild(s);
+ });
+}
 function activeData(){return DATA.filter(d=>d.activa!==false)}
 function syncZoneOptions(){const filter=document.getElementById('zone'),branch=document.getElementById('newBranchZone'),remove=document.getElementById('removeZoneSelect');if(!filter)return;const previous=filter.value;const zones=[...new Set([...MANAGED_ZONES,...activeData().map(d=>d.zona).filter(Boolean)])].sort((a,b)=>a.localeCompare(b,'es'));filter.innerHTML='<option value="all">Todas las zonas</option>'+zones.map(z=>`<option value="${escapeHtml(z)}">${escapeHtml(z)}</option>`).join('');filter.value=zones.includes(previous)?previous:'all';if(branch){const bp=branch.value;branch.innerHTML=zones.map(z=>`<option value="${escapeHtml(z)}">${escapeHtml(z)}</option>`).join('');if(zones.includes(bp))branch.value=bp;}if(remove){const rp=remove.value;remove.innerHTML=zones.map(z=>`<option value="${escapeHtml(z)}">${escapeHtml(z)}</option>`).join('');if(zones.includes(rp))remove.value=rp;}}
 function escapeHtml(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
@@ -404,7 +321,7 @@ let GLOBAL_RANK=new Map(Object.entries({'356':13,'234':15,'182':16,'357':21,'213
 let GLOBAL_VAR_RANK=new Map(Object.entries({'356':3,'050':9,'182':18,'172':19,'188':21,'266':26,'213':30,'357':31,'076':36,'234':38}));
 let GLOBAL_CENTRO_NPS=50, GLOBAL_CENTRO_VAR=44;
 function updateGlobalHeaders(){const n=document.querySelector('#pane-ranking .labels th');const v=document.querySelector('#pane-variacion .labels th');if(n)n.innerHTML=`Pos. global<br>(${GLOBAL_CENTRO_NPS} sucursales)`;if(v)v.innerHTML=`Pos. global<br>(${GLOBAL_CENTRO_VAR} sucursales)`;}
-function render(){updateGlobalHeaders();const arr=filtered();document.getElementById('resultCount').textContent=`${arr.length} de ${activeData().length} sucursales`;document.getElementById('variationCount').textContent=`${arr.length} de ${activeData().length} sucursales`;const tb=document.getElementById('tbody'),tv=document.getElementById('tbodyVar');tb.innerHTML='';tv.innerHTML='';document.getElementById('empty').hidden=arr.length>0;document.getElementById('emptyVar').hidden=arr.length>0;[...arr].sort((a,b)=>Number(b.ranking)-Number(a.ranking)||(num(b.nps)??-Infinity)-(num(a.nps)??-Infinity)).forEach(d=>{const region=(d.zona||'').includes('Interior')||(d.zona||'').includes('Ciudad')?'Centro':'';const cells=[`${d.ranking&&d.casos>=60?GLOBAL_RANK.get(d.sucursal):'—'}`,`<span class="code">${d.sucursal}</span>`,`<span>${region}</span>`,`<span>${d.zona}</span>`,`<strong>${fmt(num(d.nps))}</strong>`,`<span>${nfmt(d.casos)}</span>`,`${fmt(num(d.nps2q))}`,`${nfmt(d.casos2q)}`,`<span class="pill ${tone(d.varq)}">${fmt(num(d.varq),1)}</span>`,`<span class="pill ${tone(d.varmeta)}">${fmt(num(d.varmeta),1)}</span>`,`${fmt(num(d.nps25))}`,`${d.casos25===null?'—':nfmt(d.casos25)}`,`<span class="pill ${tone(d.varmpaa)}">${fmt(num(d.varmpaa),1)}</span>`];const tr=document.createElement('tr');cells.forEach((v,i)=>{const td=document.createElement('td');td.innerHTML=v;if(i===1)td.innerHTML+=` <span class="status ${d.ranking?'ok':'out'}">${d.ranking?'En ranking':'<60 casos'}</span>`;tr.appendChild(td)});tb.appendChild(tr);});[...arr].sort((a,b)=>Number(!(a.casos>=60&&a.casos2q>=60))-Number(!(b.casos>=60&&b.casos2q>=60))||((num(b.varq)??-Infinity)-(num(a.varq)??-Infinity))).forEach(d=>{const region=(d.zona||'').includes('Interior')||(d.zona||'').includes('Ciudad')?'Centro':'';const vr=document.createElement('tr');const varEligible=d.casos>=60&&d.casos2q>=60;const vc=[`${varEligible? (GLOBAL_VAR_RANK.get(d.sucursal)??'—'):'—'}`,`<span class="code">${d.sucursal}</span>`,`<span>${region}</span>`,`<span>${d.zona}</span>`,`<strong>${fmt(num(d.nps))}</strong>`,`${fmt(num(d.nps2q))}`,`<span class="pill ${tone(d.varq)}">${fmt(num(d.varq),1)} pp</span>`,`<span class="pill ${tone(d.varmeta)}">${fmt(num(d.varmeta),1)} pp</span>`,`${fmt(num(d.nps25))}`,`<span class="pill ${tone(d.varmpaa)}">${fmt(num(d.varmpaa),1)} pp</span>`];vc.forEach((v,i)=>{const td=document.createElement('td');td.innerHTML=v;if(i===1)td.innerHTML+=` <span class="status ${varEligible?'ok':'out'}">${varEligible?'En ranking':'<60 casos'}</span>`;if(!varEligible)td.title='No cumple el mínimo de 60 casos tanto en 3Q26 como en 2Q26';vr.appendChild(td)});tv.appendChild(vr)});const qualified=arr.filter(d=>participates(d)),avg=qualified.length?qualified.reduce((s,d)=>s+num(d.nps),0)/qualified.length:null,casos=arr.reduce((s,d)=>s+d.casos,0),variation=qualified.length?qualified.reduce((s,d)=>s+num(d.varq),0)/qualified.length:null;const growth=qualified.filter(d=>(num(d.varq)??0)>0).length;const maxGrowth=[...arr].sort((a,b)=>(num(b.varq)??-Infinity)-(num(a.varq)??-Infinity))[0];document.getElementById('avg').textContent=activeView==='variacion'?(variation===null?'—':`${variation>0?'+':''}${fmt(variation,1)} pp`):(avg===null?'—':fmt(avg));document.getElementById('cases').textContent=nfmt(casos);document.getElementById('qualified').textContent=activeView==='variacion'?`${growth} / ${qualified.length}`:`${qualified.length} / ${arr.length}`;document.getElementById('variation').textContent=activeView==='variacion'?(maxGrowth?`${maxGrowth.sucursal} · +${fmt(num(maxGrowth.varq),1)} pp`:'—'):(variation===null?'—':`${variation>0?'+':''}${fmt(variation,1)} pp`);const searchTerm=document.getElementById('search').value.trim();const chartBase=filteredForChart();const insights=document.getElementById('insights');insights.hidden=false;const sorted=[...chartBase].filter(d=>d.ranking&&num(d.nps)!==null).sort((a,b)=>num(b.nps)-num(a.nps));const low=[...arr].filter(d=>d.ranking&&num(d.nps)!==null).sort((a,b)=>num(a.nps)-num(b.nps));const selectedBranch=searchTerm?DATA.find(d=>String(d.sucursal).includes(searchTerm)):null;const bestTitle=document.getElementById('bestTitle');if(searchTerm&&selectedBranch){bestTitle.textContent='Oportunidad de mejora vs. la primera sucursal';const top=sorted[0];if(top){const gap=num(top.nps)-num(selectedBranch.nps);document.getElementById('best').innerHTML=`<div class="barrow"><b>${selectedBranch.sucursal}</b><div><div class="small">NPS seleccionado ${fmt(num(selectedBranch.nps))} · Top 1: sucursal ${top.sucursal} (${fmt(num(top.nps))})</div><div class="bartrack"><div class="barfill" style="width:${Math.max(0,Math.min(100,num(selectedBranch.nps)))}%"></div></div></div><b>${gap>0?'+':''}${fmt(gap)} pts</b></div>`}else{document.getElementById('best').textContent='Sin datos para comparar'}}else{bestTitle.textContent='Mayor NPS entre las sucursales visibles';document.getElementById('best').innerHTML=sorted.length?`<div class="barrow"><b>${sorted[0].sucursal}</b><div><div class="small">${sorted[0].zona}</div><div class="bartrack"><div class="barfill" style="width:${Math.max(0,Math.min(100,num(sorted[0].nps)))}%"></div></div></div><b>${fmt(num(sorted[0].nps))}</b></div>`:'—'}const worstCard=document.getElementById('worstTitle').closest('.insight');worstCard.hidden=!!(searchTerm&&selectedBranch);document.getElementById('worst').innerHTML=low.length?`<div class="barrow"><b>${low[0].sucursal}</b><div><div class="small">${low[0].zona}</div><div class="bartrack"><div class="barfill low" style="width:${Math.max(0,Math.min(100,num(low[0].nps)))}%"></div></div></div><b>${fmt(num(low[0].nps))}</b></div>`:'—';renderChart(chartBase,searchTerm)}
+function render(){updateGlobalHeaders();const arr=filtered();document.getElementById('resultCount').textContent=`${arr.length} de ${activeData().length} sucursales`;document.getElementById('variationCount').textContent=`${arr.length} de ${activeData().length} sucursales`;const tb=document.getElementById('tbody'),tv=document.getElementById('tbodyVar');tb.innerHTML='';tv.innerHTML='';document.getElementById('empty').hidden=arr.length>0;document.getElementById('emptyVar').hidden=arr.length>0;[...arr].sort((a,b)=>Number(b.ranking)-Number(a.ranking)||(num(b.nps)??-Infinity)-(num(a.nps)??-Infinity)).forEach(d=>{const region=(d.zona||'').includes('Interior')||(d.zona||'').includes('Ciudad')?'Centro':'';const cells=[`${d.ranking&&d.casos>=60?(GLOBAL_RANK.get(d.sucursal)??'—'):'—'}`,`<span class="code">${d.sucursal}</span>`,`<span>${region}</span>`,`<span>${d.zona}</span>`,`<strong>${fmt(num(d.nps))}</strong>`,`<span>${nfmt(d.casos)}</span>`,`${fmt(num(d.nps2q))}`,`${nfmt(d.casos2q)}`,`<span class="pill ${tone(d.varq)}">${fmt(num(d.varq),1)}</span>`,`<span class="pill ${tone(d.varmeta)}">${fmt(num(d.varmeta),1)}</span>`,`${fmt(num(d.nps25))}`,`${d.casos25===null?'—':nfmt(d.casos25)}`,`<span class="pill ${tone(d.varmpaa)}">${fmt(num(d.varmpaa),1)}</span>`];const tr=document.createElement('tr');cells.forEach((v,i)=>{const td=document.createElement('td');td.innerHTML=v;if(i===1)td.innerHTML+=` <span class="status ${d.ranking?'ok':'out'}">${d.ranking?'En ranking':'<60 casos'}</span>`;tr.appendChild(td)});tb.appendChild(tr);});[...arr].sort((a,b)=>Number(!(a.casos>=60&&a.casos2q>=60))-Number(!(b.casos>=60&&b.casos2q>=60))||((num(b.varq)??-Infinity)-(num(a.varq)??-Infinity))).forEach(d=>{const region=(d.zona||'').includes('Interior')||(d.zona||'').includes('Ciudad')?'Centro':'';const vr=document.createElement('tr');const varEligible=d.casos>=60&&d.casos2q>=60;const vc=[`${varEligible? (GLOBAL_VAR_RANK.get(d.sucursal)??'—'):'—'}`,`<span class="code">${d.sucursal}</span>`,`<span>${region}</span>`,`<span>${d.zona}</span>`,`<strong>${fmt(num(d.nps))}</strong>`,`${fmt(num(d.nps2q))}`,`<span class="pill ${tone(d.varq)}">${fmt(num(d.varq),1)} pp</span>`,`<span class="pill ${tone(d.varmeta)}">${fmt(num(d.varmeta),1)} pp</span>`,`${fmt(num(d.nps25))}`,`<span class="pill ${tone(d.varmpaa)}">${fmt(num(d.varmpaa),1)} pp</span>`];vc.forEach((v,i)=>{const td=document.createElement('td');td.innerHTML=v;if(i===1)td.innerHTML+=` <span class="status ${varEligible?'ok':'out'}">${varEligible?'En ranking':'<60 casos'}</span>`;if(!varEligible)td.title='No cumple el mínimo de 60 casos tanto en 3Q26 como en 2Q26';vr.appendChild(td)});tv.appendChild(vr)});const qualified=arr.filter(d=>participates(d)),avg=qualified.length?qualified.reduce((s,d)=>s+num(d.nps),0)/qualified.length:null,casos=arr.reduce((s,d)=>s+d.casos,0),variation=qualified.length?qualified.reduce((s,d)=>s+num(d.varq),0)/qualified.length:null;const growth=qualified.filter(d=>(num(d.varq)??0)>0).length;const maxGrowth=[...arr].sort((a,b)=>(num(b.varq)??-Infinity)-(num(a.varq)??-Infinity))[0];document.getElementById('avg').textContent=activeView==='variacion'?(variation===null?'—':`${variation>0?'+':''}${fmt(variation,1)} pp`):(avg===null?'—':fmt(avg));document.getElementById('cases').textContent=nfmt(casos);document.getElementById('qualified').textContent=activeView==='variacion'?`${growth} / ${qualified.length}`:`${qualified.length} / ${arr.length}`;document.getElementById('variation').textContent=activeView==='variacion'?(maxGrowth?`${maxGrowth.sucursal} · +${fmt(num(maxGrowth.varq),1)} pp`:'—'):(variation===null?'—':`${variation>0?'+':''}${fmt(variation,1)} pp`);const searchTerm=document.getElementById('search').value.trim();const chartBase=filteredForChart();const insights=document.getElementById('insights');insights.hidden=false;const sorted=[...chartBase].filter(d=>d.ranking&&num(d.nps)!==null).sort((a,b)=>num(b.nps)-num(a.nps));const low=[...arr].filter(d=>d.ranking&&num(d.nps)!==null).sort((a,b)=>num(a.nps)-num(b.nps));const selectedBranch=searchTerm?DATA.find(d=>String(d.sucursal).includes(searchTerm)):null;const bestTitle=document.getElementById('bestTitle');if(searchTerm&&selectedBranch){bestTitle.textContent='Oportunidad de mejora vs. la primera sucursal';const top=sorted[0];if(top){const gap=num(top.nps)-num(selectedBranch.nps);document.getElementById('best').innerHTML=`<div class="barrow"><b>${selectedBranch.sucursal}</b><div><div class="small">NPS seleccionado ${fmt(num(selectedBranch.nps))} · Top 1: sucursal ${top.sucursal} (${fmt(num(top.nps))})</div><div class="bartrack"><div class="barfill" style="width:${Math.max(0,Math.min(100,num(selectedBranch.nps)))}%"></div></div></div><b>${gap>0?'+':''}${fmt(gap)} pts</b></div>`}else{document.getElementById('best').textContent='Sin datos para comparar'}}else{bestTitle.textContent='Mayor NPS entre las sucursales visibles';document.getElementById('best').innerHTML=sorted.length?`<div class="barrow"><b>${sorted[0].sucursal}</b><div><div class="small">${sorted[0].zona}</div><div class="bartrack"><div class="barfill" style="width:${Math.max(0,Math.min(100,num(sorted[0].nps)))}%"></div></div></div><b>${fmt(num(sorted[0].nps))}</b></div>`:'—'}const worstCard=document.getElementById('worstTitle').closest('.insight');worstCard.hidden=!!(searchTerm&&selectedBranch);document.getElementById('worst').innerHTML=low.length?`<div class="barrow"><b>${low[0].sucursal}</b><div><div class="small">${low[0].zona}</div><div class="bartrack"><div class="barfill low" style="width:${Math.max(0,Math.min(100,num(low[0].nps)))}%"></div></div></div><b>${fmt(num(low[0].nps))}</b></div>`:'—';renderChart(chartBase,searchTerm)}
 
 function filteredForChart(){const z=document.getElementById('zone').value,s=document.getElementById('statusFilter').value;return activeData().filter(d=>(z==='all'||d.zona===z)&&(s==='all'||(s==='rank'?participates(d):!participates(d))))}
 function renderChart(arr,searchTerm=''){
@@ -594,8 +511,7 @@ async function readPdfInput(inputId,label){
    if(!d&&zone){d={sucursal:code,zona:zone,nps:m[3].replace('.',','),casos:Number(m[4]),nps2q:m[5].replace('.',','),casos2q:Number(m[6]),varq:m[7].replace('.',','),varmeta:m[8].replace('.',','),nps25:m[9]?m[9].replace('.',','):'—',casos25:m[10]?Number(m[10]):null,varmpaa:m[11]?m[11].replace('.',','):'—',ranking:Number(m[4])>=60,activa:true};DATA.push(d);wanted.add(code);if(!MANAGED_ZONES.includes(zone))MANAGED_ZONES.push(zone);added++;updated++;continue;}
    if(!d||!zone)continue;d.zona=zone;d.nps=m[3].replace('.',',');d.casos=Number(m[4]);d.nps2q=m[5].replace('.',',');d.casos2q=Number(m[6]);d.varq=m[7].replace('.',',');d.varmeta=m[8].replace('.',',');if(m[9])d.nps25=m[9].replace('.',',');if(m[10])d.casos25=Number(m[10]);if(m[11])d.varmpaa=m[11].replace('.',',');d.ranking=d.casos>=60;d.activa=d.activa!==false;updated++;
   }
-  syncZoneOptions();renderAdminBranches();saveConfig();render();status.textContent=updated?`${label}: ${updated} sucursal(es) procesadas${added?` · ${added} nueva(s) detectada(s)`:''}. Revisá los datos y confirmá la publicación compartida.`:`No se reconocieron filas de Neuquén en ${label}. Se mantienen los datos anteriores.`;
-  if(updated)markPendingPublication();
+  syncZoneOptions();renderAdminBranches();saveConfig();render();status.textContent=updated?`${label}: ${updated} sucursal(es) actualizadas${added?` · ${added} nueva(s) detectada(s)`:''}`:`No se reconocieron filas de Neuquén en ${label}. Se mantienen los datos anteriores.`;
  }catch(err){status.textContent='Error al leer el PDF: '+err.message;}
  input.value='';
 }
@@ -629,72 +545,10 @@ async function readZonePerformancePdf(){
   const unique=[...new Map(parsed.map(d=>[d.zona.toLocaleLowerCase('es'),d])).values()];
   if(!unique.length)throw new Error('No se detectaron filas de zonas. Verificá que sea el PDF «Desempeño por zona» con las columnas de NPS, casos, meses, meta y variación. No se modificaron los datos actuales.');
   ZONE_PERFORMANCE.splice(0,ZONE_PERFORMANCE.length,...unique.sort((a,b)=>b.var-a.var)); saveZonePerformance(); renderZonePerformance(); renderZoneBars();
-  status.textContent=`Informe procesado: ${unique.length} zonas. Revisá los datos y confirmá la publicación compartida.`;
-  markPendingPublication();
+  status.textContent=`Informe cargado: ${unique.length} zonas actualizadas. Los cambios se guardan en Google Sheets para compartirlos entre dispositivos.`;
  }catch(err){status.textContent='No se pudo actualizar el desempeño por zona: '+err.message;}
  input.value='';
 }
-
-// Publicación compartida: el token se valida exclusivamente en Apps Script, nunca en el HTML.
-let adminToken='';
-let pendingSharedPublication=false;
-function updatePublishPreview(){
- const btn=document.getElementById('publishShared');
- const preview=document.getElementById('publishPreview');
- if(!btn||!preview)return;
- const branchCount=DATA.length;
- const zoneCount=Array.isArray(ZONE_PERFORMANCE)?ZONE_PERFORMANCE.length:0;
- preview.textContent=pendingSharedPublication
-  ? `Vista previa lista: ${branchCount} sucursales · ${zoneCount} zonas · período ${document.querySelector('.period')?.textContent.trim()||'actual'}. Los datos aún no se publicaron.`
-  : 'Todavía no hay cambios pendientes de publicación. Cargá uno o más PDF y revisá los resultados antes de confirmar.';
- btn.disabled=!pendingSharedPublication;
-}
-async function publishSharedData(){
- if(!adminUnlocked||!adminToken){alert('Primero habilitá la administración con el token configurado en Apps Script.');return;}
- if(!pendingSharedPublication){alert('No hay cambios pendientes para publicar.');return;}
- const btn=document.getElementById('publishShared'), status=document.getElementById('publishStatus');
- const confirmed=confirm(`¿Publicar los datos revisados en Google Sheets para todos los usuarios?\nSucursales: ${DATA.length}\nZonas: ${ZONE_PERFORMANCE.length}`);
- if(!confirmed)return;
- btn.disabled=true;status.textContent='Enviando datos al servidor y validando autorización…';
- const payload={
-  token:adminToken, action:'publish', periodo:document.querySelector('.period')?.textContent.trim()||'3Q 2026',
-  nps:DATA.map(d=>({
-   Sucursal:String(d.sucursal||'').padStart(3,'0'),Zona:d.zona||'',Region:d.region||'Neuquén',
-   NPS:d.nps??'',Casos_Totales:d.casos??'',Promotores:d.promotores??'',Pasivos:d.pasivos??'',Detractores:d.detractores??'',
-   Posicion_Global:GLOBAL_RANK.get(String(d.sucursal||''))??'',NPS_Anterior:d.nps2q??'',Casos_Anterior:d.casos2q??'',
-   Variacion_Trimestre:d.varq??'',Variacion_Meta:d.varmeta??'',NPS_Anual_Anterior:d.nps25??'',Casos_Anual_Anterior:d.casos25??'',
-   Variacion_Anual:d.varmpaa??'',Activa:d.activa===false?'NO':'SI'
-  })),
-  desempeno:ZONE_PERFORMANCE.map(d=>({Zona:d.zona||'',Region:d.region||'',Indicador:'NPS YTD',Valor:d.ytd??'',Unidad:'puntos',Casos:d.casos??'',Julio:d.jul??'',Agosto:d.ago??'',Septiembre:d.sep??'',Meta:d.meta??'',Variacion:d.var??''})),
-  zonas:MANAGED_ZONES,
-  timestamp:new Date().toISOString()
- };
- try{
-  // no-cors avoids browser CORS preflight for Apps Script; server response is verified by polling the read API.
-  await fetch(GOOGLE_SHEETS_API,{method:'POST',mode:'no-cors',redirect:'follow',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});
-  status.textContent='Solicitud enviada. Verificando la publicación compartida…';
-  await new Promise(r=>setTimeout(r,2500));
-  const check=await fetchSharedSheetData();
-  const publishedAt=(check.configuracion||[]).find(r=>r.Parametro==='Ultima_Publicacion')?.Valor;
-  const firstCode=String(DATA[0]?.sucursal||'').padStart(3,'0');
-  const remoteFirst=(check.nps||[]).find(r=>String(r.Sucursal||r.Codigo||'').padStart(3,'0')===firstCode);
-  const remoteNps=remoteFirst?String(remoteFirst.NPS??''):'';
-  const localNps=DATA[0]?String(DATA[0].nps??''):'';
-  const matches=!!publishedAt&&!!remoteFirst&&remoteNps.replace('.',',')===localNps.replace('.',',');
-  if(matches){
-   pendingSharedPublication=false;
-   status.textContent='Publicación verificada: Google Sheets ya expone los datos compartidos. Los usuarios verán la actualización al sincronizar.';
-   setSharedStatus('Datos compartidos actualizados',true);
-  }else{
-   status.textContent='La solicitud se envió, pero no se pudo verificar el cambio. Confirmá que reemplazaste el código y actualizaste el despliegue de Apps Script, y revisá el historial.';
-  }
- }catch(err){
-  status.textContent='No se pudo verificar la publicación: '+err.message+'. Revisá la configuración del Apps Script.';
- }finally{updatePublishPreview();}
-}
-document.getElementById('publishShared')?.addEventListener('click',publishSharedData);
-function markPendingPublication(){pendingSharedPublication=true;updatePublishPreview();}
-
 // La sección de administración solicita clave antes de mostrar los controles de carga.
 const adminPanel=document.querySelector('.admin-tools');
 const adminSummary=adminPanel.querySelector('summary');
@@ -705,18 +559,16 @@ adminSummary.addEventListener('click',function(event){
  event.preventDefault();
  const entered=window.prompt('Ingresá la clave de administración:');
  if(entered===null) return;
- if(entered !== null && entered.trim()==='admin2026'){
-  adminToken='admin2026';
+ if(entered==='admin2026'){
   adminUnlocked=true;
   adminPanel.open=true;
   adminSummary.querySelector('.admin-lock').textContent='🔓 Sesión habilitada';
-  document.getElementById('publishStatus').textContent='Sesión habilitada. La autorización se verificará en el servidor al publicar.';
  }else{
   window.alert('Clave incorrecta. No se habilitó la administración.');
  }
 });
 document.getElementById('closeAdminSession').addEventListener('click',()=>{
- adminUnlocked=false; adminToken=''; adminPanel.open=false;
+ adminUnlocked=false; adminPanel.open=false;
  const lock=adminSummary.querySelector('.admin-lock'); if(lock)lock.textContent='🔒 Sesión cerrada';
  const status=document.getElementById('uploadStatus'); if(status)status.textContent='Sesión administrativa cerrada.';
 });
@@ -731,7 +583,6 @@ document.getElementById('importConfig').addEventListener('change',e=>importConfi
 document.getElementById('resetConfig').addEventListener('click',restoreConfig);
 document.getElementById('adminBranches').addEventListener('change',e=>{const select=e.target.closest('[data-branch-zone]');if(!select)return;const d=DATA.find(x=>x.sucursal===select.dataset.branchZone);if(!d)return;d.zona=select.value;if(!MANAGED_ZONES.includes(d.zona))MANAGED_ZONES.push(d.zona);saveConfig();syncZoneOptions();renderAdminBranches();render();});
 document.getElementById('adminBranches').addEventListener('click',e=>{const btn=e.target.closest('[data-toggle-branch]');if(!btn)return;const d=DATA.find(x=>x.sucursal===btn.dataset.toggleBranch);if(!d)return;d.activa=d.activa===false;saveConfig();renderAdminBranches();render();setConfigStatus(`Sucursal ${d.sucursal}: ${d.activa?'activada':'desactivada'}. El historial se conserva.`);});
-syncZoneOptions();renderAdminBranches();render();updatePublishPreview();
-syncFromGoogleSheets();
-setInterval(syncFromGoogleSheets, 60000);
+syncZoneOptions();renderAdminBranches();render();
+loadSharedConfig(true);
 </script></body></html>
